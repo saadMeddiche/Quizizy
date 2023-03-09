@@ -1,7 +1,7 @@
 <template>
   <div class="questions">
-    <router-link v-if="SeeResults" :to="{name : 'ResultsView'}">See Results</router-link> 
-    <div v-if="!SeeResults" class="Next_Button">
+    <router-link v-if="SeeResults && selectedOption" :to="{name : 'ResultsView'}" @click="Correction">See Results</router-link> 
+    <div v-if="!SeeResults && selectedOption" class="Next_Button">
       <button @click="NextPart">Next</button>
     </div>
     <div v-if="Parts && Part">
@@ -11,7 +11,7 @@
           <h3>{{Part.question}}</h3>
         </div>
         <div class="Options">
-          <p v-for="option in Part.options" :key="option">
+          <p v-for="option in Part.options" :key="option" :id="option.id" @click="SelectedOption(option.id)">
             {{ option.content }}
           </p>
         </div>
@@ -32,7 +32,9 @@ export default {
     return {
       Parts:[],
       Part:[],
+      Results:[],
       currentIndex:0,
+      selectedOption:null,
       SeeResults:false
     }
   }
@@ -67,10 +69,33 @@ export default {
 
     },
     NextPart(){
+
       this.currentIndex++
       this.SetPart()
-
       if(this.currentIndex == this.Parts.length - 1) this.SeeResults = true
+
+      this.Correction()
+    },
+    Correction(){
+
+      if( this.Part.answers.correct != this.selectedOption){
+        this.Results.push([this.Part.id,this.selectedOption])
+      }
+
+      this.selectedOption = null
+
+      console.log(this.Results)
+    },
+    SelectedOption(Id){
+      //Change the style Style
+      for(var i = 1 ; i<=4; i++){
+        document.getElementById(i).style.color = 'black'
+      }
+      document.getElementById(Id).style.color = 'red'
+      // =============================
+      //The Last Select option
+      this.selectedOption = Id
+      console.log(this.selectedOption)
     }
   }
 }
@@ -103,4 +128,5 @@ export default {
     border-radius: 2px;
     border: 1px solid grey;
   }
+ 
 </style>
