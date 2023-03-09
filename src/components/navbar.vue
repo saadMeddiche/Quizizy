@@ -21,10 +21,10 @@ export default {
   data(){
     return {
       Links:{
-      'HomeView' : {name:'Home',isActive:false},
-      'InformationView':{name:'Help',isActive:false},
-      'QuestionsView':{name:'Test',isActive:false},
-      'ResultsView':{name:'Results',isActive:false}
+      'HomeView' : {name:'Home', isActive:false},
+      'InformationView':{name:'Help', isActive:false},
+      'QuestionsView':{name:'Test', isActive:false},
+      'ResultsView':{name:'Results', isActive:false}
       }
     }
   }
@@ -51,7 +51,7 @@ export default {
 <style>
 .nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background: #ffc400;
   padding: 10px;
 
@@ -75,7 +75,7 @@ export default {
   display: flex;
   align-items: center;
 
-  gap: 15px;
+  gap: 40px;
 
   font-size: 30px;
   font-weight: bold;
