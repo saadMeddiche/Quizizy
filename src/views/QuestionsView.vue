@@ -1,10 +1,9 @@
 <template>
   <div class="questions">
-    <h1>This is the Test page</h1>
     <router-link v-if="SeeResults" :to="{name : 'ResultsView'}">See Results</router-link> 
     <div v-if="!SeeResults" class="Next_Button">
-        <button @click="NextPart">Next</button>
-      </div>
+      <button @click="NextPart">Next</button>
+    </div>
     <div v-if="Parts && Part">
 
       <div class="Part">
@@ -47,17 +46,31 @@ export default {
       fetch('http://localhost:3000/Parts')
         .then(res => res.json())
         .then(data => this.Parts = data)  
+        .then(s => this.RandomizeParts())
         .then(e => this.SetPart())  
     },
     SetPart(){
       this.Part = this.Parts[this.currentIndex]
+    },
+    RandomizeParts(){
+      var Parts = this.Parts
+
+      for (var i = Parts.length - 1; i > 0; i--) {
+
+        var x = Math.floor(Math.random() * (i + 1))
+
+        ;
+
+        [Parts[i], Parts[x]] = [Parts[x], Parts[i]]
+
+      }
+
     },
     NextPart(){
       this.currentIndex++
       this.SetPart()
 
       if(this.currentIndex == this.Parts.length - 1) this.SeeResults = true
-        
     }
   }
 }
