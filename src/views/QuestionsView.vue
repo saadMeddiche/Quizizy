@@ -1,6 +1,6 @@
 <template>
   <div class="questions">
-    <router-link v-if="SeeResults && selectedOption" :to="{name : 'ResultsView'}" @click="Correction">See Results</router-link> 
+    <router-link v-if="SeeResults && selectedOption" :to="{name : 'ResultsView'}" @click="Correction();passResults()">See Results</router-link> 
     <div v-if="!SeeResults && selectedOption" class="Next_Button">
       <button @click="NextPart">Next</button>
     </div>
@@ -10,13 +10,12 @@
         <div class="Question">
           <h3>{{Part.question}}</h3>
         </div>
-        <div class="Options">
+        <div class="Options" id="options">
           <p v-for="option in Part.options" :key="option" :id="option.id" @click="SelectedOption(option.id)">
             {{ option.content }}
           </p>
         </div>
       </div>
-
     </div>
 
     <div v-else>
@@ -59,11 +58,8 @@ export default {
 
       for (var i = Parts.length - 1; i > 0; i--) {
 
-        var x = Math.floor(Math.random() * (i + 1))
-
-        ;
-
-        [Parts[i], Parts[x]] = [Parts[x], Parts[i]]
+        var x = Math.floor(Math.random() * (i + 1));
+        [Parts[i], Parts[x]] = [Parts[x], Parts[i]];
 
       }
 
@@ -79,23 +75,25 @@ export default {
     Correction(){
 
       if( this.Part.answers.correct != this.selectedOption){
-        this.Results.push([this.Part.id,this.selectedOption])
+        this.Results.push(this.selectedOption)
       }
 
       this.selectedOption = null
 
-      console.log(this.Results)
     },
     SelectedOption(Id){
-      //Change the style Style
-      for(var i = 1 ; i<=4; i++){
-        document.getElementById(i).style.color = 'black'
+      //Change the style 
+      for(var i = 0 ; i < this.Part.options.length; i++){
+        document.getElementById(this.Part.options[i].id).style.color = 'black'
       }
-      document.getElementById(Id).style.color = 'red'
+      document.getElementById(Id).style.color='red'
+      
       // =============================
       //The Last Select option
       this.selectedOption = Id
-      console.log(this.selectedOption)
+    },
+    passResults(){
+      this.$store.commit("PassResults", this.Results);
     }
   }
 }
@@ -127,6 +125,14 @@ export default {
     border-image: initial;
     border-radius: 2px;
     border: 1px solid grey;
+  }
+
+  .default{
+    color:black;
+  }
+
+  .red{
+    color: red;
   }
  
 </style>

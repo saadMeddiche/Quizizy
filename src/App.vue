@@ -13,7 +13,10 @@ export default{
 }
 </script>
 
-<style>
+<style lang="scss">
+
+@use "@/assets/scss/main.scss";
+
 *{
   font-family:cursive;
   margin: 0;
@@ -25,7 +28,7 @@ export default{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
 }
-
 
 </style>
