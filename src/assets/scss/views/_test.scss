@@ -1,0 +1,98 @@
+// Question and options
+.questions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 70%;
+
+
+    background-color: var(--super-dark-orange);
+
+    .Part{
+        display: flex;
+        justify-content: space-evenly;
+        position:sticky;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+
+        color: var(--super-dark-orange);
+        color: white;
+
+        .Question{
+            color: var(--Yellow);
+
+            margin: 10px;
+            border: 2px solid var(--Yellow);
+            border-radius: 10px;
+
+            padding: 10px;
+            background-color: var(--very-dark-orange);
+
+        }
+
+        .Options{
+
+            .Option{
+                cursor: pointer;
+                
+                margin:10px;
+                border: 2px solid var(--Yellow);
+                border-radius: 10px;
+        
+                padding: 10px;
+                margin-bottom: 10px;
+                background-color: var(--very-dark-orange);
+
+            
+            }
+
+        }
+
+    }
+}
+.TestButtons{
+    width: 100%;
+    .Next_Button{
+        width: 90%;
+    
+        display: flex;
+        justify-content: end;
+        button{
+            cursor: pointer;
+            
+            border: 3px solid var(--very-dark-orange);
+            border-radius: 5px;
+        
+            font-size: 30px;
+        
+        
+            padding: 5px;
+            color: var(--super-dark-orange);
+            font-weight: bold;
+            background-color: var(--Yellow);    
+        }
+    }
+    .Result_Button{
+        cursor: pointer;
+        text-decoration: none;
+        
+        border: 3px solid var(--very-dark-orange);
+        border-radius: 5px;
+    
+        font-size: 30px;
+    
+    
+        padding: 5px;
+        color: var(--super-dark-orange);
+        font-weight: bold;
+        background-color: var(--Yellow);  
+    }
+}
+
+.LoadingParts{
+    color:var(--Yellow);
+}

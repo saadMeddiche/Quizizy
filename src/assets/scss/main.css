@@ -75,6 +75,23 @@ that will be used in the website*/
     justify-content: space-between;
   }
 }
+@media (max-width: 850px) {
+  .Part {
+    display: block;
+    justify-content: space-between;
+  }
+  .Part .Question {
+    margin-top: 10%;
+  }
+  .Part .Options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .Part .Options .Option {
+    width: 45%;
+  }
+}
 @media (max-width: 400px) {
   .nav {
     position: relative;
@@ -125,6 +142,16 @@ that will be used in the website*/
     opacity: 1;
     -webkit-clip-path: circle(100% at center);
             clip-path: circle(100% at center);
+  }
+  .Part {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Part .Options .Option {
+    width: 100%;
+  }
+  .TestButtons {
+    margin-top: 50px;
   }
 }
 body {

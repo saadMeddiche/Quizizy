@@ -1,28 +1,46 @@
 <template>
   <div class="questions">
-    <router-link v-if="SeeResults && selectedOption" :to="{name : 'ResultsView'}" @click="Correction();passResults()">See Results</router-link> 
-    <div v-if="!SeeResults && selectedOption" class="Next_Button">
-      <button @click="NextPart">Next</button>
-    </div>
+    
+    <!-- Parts -->
     <div v-if="Parts && Part">
 
+      <!-- Part -->
       <div class="Part">
+
+        <!-- Question -->
         <div class="Question">
           <h3>{{Part.question}}</h3>
         </div>
+
+        <!-- Options -->
         <div class="Options" id="options">
-          <p v-for="option in Part.options" :key="option" :id="option.id" @click="SelectedOption(option.id)">
+          <p v-for="option in Part.options" class="Option" :key="option" :id="option.id" @click="SelectedOption(option.id)">
             {{ option.content }}
           </p>
         </div>
-      </div>
-    </div>
 
-    <div v-else>
+      </div>
+
+    </div>
+    <!-- Wait For the Parts To Load -->
+    <div v-else class="LoadingParts">
       <h2>Loading Questions...</h2>
     </div>
 
+    
+
   </div>
+
+  <!-- ===============Buttons=============== -->
+  <div class="TestButtons">
+    <!-- Result Button -->
+    <router-link v-if="SeeResults && selectedOption" class="Result_Button" :to="{name : 'ResultsView'}" @click="Correction();passResults()">See Results</router-link> 
+    <!-- Next Button -->
+    <div v-if="!SeeResults && selectedOption" class="Next_Button">
+      <button @click="NextPart">Next</button>
+    </div>
+  </div>
+  <!-- ===============End Buttons=============== -->
 </template>
 
 <script>
@@ -84,7 +102,7 @@ export default {
     SelectedOption(Id){
       //Change the style 
       for(var i = 0 ; i < this.Part.options.length; i++){
-        document.getElementById(this.Part.options[i].id).style.color = 'black'
+        document.getElementById(this.Part.options[i].id).style.color = 'white'
       }
       document.getElementById(Id).style.color='red'
       
@@ -99,40 +117,8 @@ export default {
 }
 </script>
 
-<style>
-  .questions a{
-    text-decoration: none;
-    appearance: auto;
-    writing-mode: horizontal-tb !important;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: center;
-    align-items: flex-start;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: buttonface;
-    margin: 0em;
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: buttonborder;
-    border-image: initial;
-    border-radius: 2px;
-    border: 1px solid grey;
-  }
+<style lang="scss">
 
-  .default{
-    color:black;
-  }
+  @use "@/assets/scss/views/_test.scss";
 
-  .red{
-    color: red;
-  }
- 
 </style>

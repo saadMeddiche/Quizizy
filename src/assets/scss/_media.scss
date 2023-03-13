@@ -32,7 +32,35 @@
  
  }
 
+//This will happen id the screen < 850px
+@media (max-width:850px) {
+    .Part{
+        display: block;
+        justify-content: space-between;
+        
+        .Question{
+            margin-top: 10%;
 
+
+        }
+    
+        .Options{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+            .Option{
+    
+                width: 45%;
+            }
+    
+        }
+    
+    }
+   
+}
+
+//This will happen id the screen < 400px
 @media (max-width:400px){
 
 
@@ -111,5 +139,24 @@
     
 
 
+    }
+
+    .Part{
+        display: flex;
+        flex-wrap: wrap;        
+    
+        .Options{
+            
+            
+            .Option{
+    
+                width: 100%;
+            }
+    
+        }
+    
+    }
+    .TestButtons{
+        margin-top: 50px;
     }
 }
