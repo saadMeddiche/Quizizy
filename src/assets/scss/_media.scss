@@ -1,0 +1,115 @@
+//This will happen id the screen > 850px
+@media (min-width:850px){
+    .home{
+        height: 89%;
+    }
+    //The media of the navbar
+     .nav{
+ 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;  
+        height: 11%;
+ 
+ 
+        .logo{
+            width: 40%;
+            text-align: start;
+        }
+     
+        .links{
+            margin-right: 0px;
+            width: 45%;
+
+            justify-content: space-between;
+             
+             
+        }
+     
+     
+     }
+     //The end
+ 
+ }
+
+
+@media (max-width:400px){
+
+
+ .nav{
+    position: relative;
+    z-index: 9;
+    height: 8%;
+    
+
+    text-align: center;
+
+    .logo{
+        display: none;
+    }
+
+    .menu-icon{
+        text-align: center;
+        display: block;
+    }
+
+    .links{
+
+        display: block;
+        text-align: center;
+
+        padding-top: 0px;
+
+        // so z-index can work
+        position: relative;
+        z-index: 9;
+
+        background-color: var(--super-dark-orange);
+        color: var(--Yellow);
+
+        align-items: center;
+
+        height: 100vh;
+
+
+        transition:
+        opacity .8s .8s,
+        clip-path 1s .4s;
+
+        opacity: 0;
+
+
+        background: var(--super-dark-orange);
+        clip-path: circle(200px at top left);
+
+        .Link{
+            padding-top: 60px;
+            a{
+                color: var(--Yellow);
+            }
+        }
+
+        .active{
+            a{  
+                background-color: var(--Yellow);
+                color: var(--super-dark-orange);
+                border-radius:5px ;
+            }      
+        }
+    }
+
+    
+
+    .menu-btn:checked ~ .links{
+        transition: 
+        opacity .8s .5s,
+        clip-path 1s .5s;
+        opacity:1;
+        clip-path: circle(100% at center);        
+    }
+
+    
+
+
+    }
+}

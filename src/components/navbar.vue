@@ -6,10 +6,15 @@
       <p>QuiZiZy</p>
     </div>
 
+    <input type="checkbox" class="menu-btn" id="menu-btn" hidden>
+    <label for="menu-btn">
+        <iconify-icon icon="ic:round-menu" class="menu-icon" style="color: #5b1647;" width="60" height="60"></iconify-icon>
+    </label>
+
     <div class="links">
-      <a v-for="Link in Links" :key="Link" :class="{active:Link.isActive}">
-        {{ Link.name }}
-      </a>
+      <li v-for="Link in Links" :key="Link" class="Link" :class="{active:Link.isActive}">
+        <a>{{ Link.name }}</a>
+      </li>
     </div>
 
   </div>
@@ -49,7 +54,7 @@ export default {
 </script>
 
 <style>
-.nav {
+/* .nav {
   display: flex;
   justify-content: space-around;
   background: #ffc400;
@@ -95,5 +100,5 @@ color:#5b1647;
   background-color:#5b1647 ;
   padding: 4px;
   border-radius:5px ;
-}
+} */
 </style>

@@ -1,3 +1,14 @@
-@use './colors';
 
-@use './scrollBar';
+@use './inc/colors';
+
+@use './inc/scrollBar';
+
+@use './inc/navbar';
+
+@use './media';
+
+body{   
+    height: 100%;
+    background: var(--super-dark-orange);
+}
+// @use './views/home';

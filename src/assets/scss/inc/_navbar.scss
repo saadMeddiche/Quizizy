@@ -1,0 +1,55 @@
+.nav{
+
+    width: 100%;
+    height: fit-content;
+
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--super-dark-orange);
+    background-color: var(--Yellow);
+
+
+    .logo{
+        // margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    //It will only be appear in the mobile version
+    .menu-icon{
+        display: none;
+    }
+
+    .links{
+        
+        display: flex;
+        justify-content: space-evenly;
+
+        padding: 15px;
+
+        list-style: none;
+        .Link{
+
+            a{
+                text-decoration: none;
+                color: var(--super-dark-orange);
+            }
+
+        }
+
+        .active{
+            background-color: var(--super-dark-orange);
+            border-radius: 10px;
+                a{  
+                    padding: 10px;
+                    color: var(--Yellow);
+                }
+        }
+        
+    }
+
+
+}

@@ -16,4 +16,118 @@ that will be used in the website*/
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: var(--super-dark-orange);
+}
+
+.nav {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--super-dark-orange);
+  background-color: var(--Yellow);
+}
+.nav .logo {
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+.nav .menu-icon {
+  display: none;
+}
+.nav .links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+  list-style: none;
+}
+.nav .links .Link a {
+  text-decoration: none;
+  color: var(--super-dark-orange);
+}
+.nav .links .active {
+  background-color: var(--super-dark-orange);
+  border-radius: 10px;
+}
+.nav .links .active a {
+  padding: 10px;
+  color: var(--Yellow);
+}
+
+@media (min-width: 850px) {
+  .home {
+    height: 89%;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 11%;
+  }
+  .nav .logo {
+    width: 40%;
+    text-align: start;
+  }
+  .nav .links {
+    margin-right: 0px;
+    width: 45%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 400px) {
+  .nav {
+    position: relative;
+    z-index: 9;
+    height: 8%;
+    text-align: center;
+  }
+  .nav .logo {
+    display: none;
+  }
+  .nav .menu-icon {
+    text-align: center;
+    display: block;
+  }
+  .nav .links {
+    display: block;
+    text-align: center;
+    padding-top: 0px;
+    position: relative;
+    z-index: 9;
+    background-color: var(--super-dark-orange);
+    color: var(--Yellow);
+    align-items: center;
+    height: 100vh;
+    transition: opacity 0.8s 0.8s, -webkit-clip-path 1s 0.4s;
+    transition: opacity 0.8s 0.8s, clip-path 1s 0.4s;
+    transition: opacity 0.8s 0.8s, clip-path 1s 0.4s, -webkit-clip-path 1s 0.4s;
+    opacity: 0;
+    background: var(--super-dark-orange);
+    -webkit-clip-path: circle(200px at top left);
+            clip-path: circle(200px at top left);
+  }
+  .nav .links .Link {
+    padding-top: 60px;
+  }
+  .nav .links .Link a {
+    color: var(--Yellow);
+  }
+  .nav .links .active a {
+    background-color: var(--Yellow);
+    color: var(--super-dark-orange);
+    border-radius: 5px;
+  }
+  .nav .menu-btn:checked ~ .links {
+    transition: opacity 0.8s 0.5s, -webkit-clip-path 1s 0.5s;
+    transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+    transition: opacity 0.8s 0.5s, clip-path 1s 0.5s, -webkit-clip-path 1s 0.5s;
+    opacity: 1;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+}
+body {
+  height: 100%;
+  background: var(--super-dark-orange);
 }/*# sourceMappingURL=main.css.map */
