@@ -1,14 +1,31 @@
 <template>
-  <h1>This is the Results page</h1>
-    <router-link :to="{name : 'HomeView'}">Restart</router-link> 
-  <div class="results" v-for="Part in filteredParts" :key="Part">
-    <div class="question">
-        <h3>{{ Part.question }}</h3>
+
+  <div class="Results">
+    <div class="Info">
+
+      <div class="Score">
+        <p>You have {{ Parts.length - FalseAnswers.length }}/{{ Parts.length }} Correct Answers</p>
+      </div>
+
+      <div class="BodyOfDescription">
+        <p>👇 👇 This is the correction of the false answers👇 👇 </p>
+      </div>
+
     </div>
-    <div class="answer">
-        <p>{{ Part.answers.comment }}</p>
+
+    <div class="Result" v-for="Part in filteredParts" :key="Part">
+      <div class="question">
+          <h3>{{ Part.question }}</h3>
+      </div>
+      <div class="answer">
+          <p v-html="Part.answers.comment"></p>
+      </div>
     </div>
+
+    <router-link class="Restart_Button" :to="{name : 'HomeView'}">Restart</router-link> 
+
   </div>
+
 </template>
 
 <script>
@@ -32,7 +49,8 @@ export default {
   },
   computed:{
     filteredParts(){
-      return this.Parts.filter((Part) => !this.FalseAnswers.includes(Part.answers.correct))
+      console.log(this.FalseAnswers)
+      return this.Parts.filter((Part) => this.FalseAnswers.includes(Part.id))
     }
   }
  
@@ -40,6 +58,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  @use "@/assets/scss/views/_results.scss";
 </style>

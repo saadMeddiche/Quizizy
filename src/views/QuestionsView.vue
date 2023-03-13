@@ -83,17 +83,17 @@ export default {
 
     },
     NextPart(){
+      this.Correction()
 
       this.currentIndex++
       this.SetPart()
       if(this.currentIndex == this.Parts.length - 1) this.SeeResults = true
 
-      this.Correction()
     },
     Correction(){
-
+      
       if( this.Part.answers.correct != this.selectedOption){
-        this.Results.push(this.selectedOption)
+        this.Results.push(this.Part.id)
       }
 
       this.selectedOption = null

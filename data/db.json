@@ -14,7 +14,7 @@
         },
         {
           "id": 3,
-          "content": "Amazon EC2 instances can be launched on demand when needed."
+          "content": "[x] Amazon EC2 instances can be launched on demand when needed."
         },
         {
           "id": 4,
@@ -23,7 +23,7 @@
       ],
       "answers": {
         "correct": 3,
-        "comment": "The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load."
+        "comment": "<b>The correct answer is</b> C) Amazon EC2 instances can be launched on demand when needed  <br><b>Because:</b>  The ability to launch instances on demand when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load."
       }
     },
     {
@@ -36,7 +36,7 @@
         },
         {
           "id": 6,
-          "content": "AWS Database Migration Service (AWS DMS)"
+          "content": "[x] AWS Database Migration Service (AWS DMS)"
         },
         {
           "id": 7,
@@ -49,7 +49,7 @@
       ],
       "answers": {
         "correct": 6,
-        "comment": "AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases"
+        "comment": "<b>The correct answer is </b>B) AWS Database Migration Service (AWS DMS) <b><br>Because:</b>  AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains         fully operational during the migration, minimizing downtime to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases."
       }
     },
     {
@@ -70,12 +70,12 @@
         },
         {
           "id": 12,
-          "content": "AWS Marketplace"
+          "content": "[x] AWS Marketplace"
         }
       ],
       "answers": {
         "correct": 12,
-        "comment": "AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that makes it easy to find, test, buy, and deploy software that runs on AWS to applications that rely on the database. AWS DMS can migrate data to and from most widely used commercial and open-source databases"
+        "comment": "<b>The correct answer is </b>D) AWS Marketplace <br><b>Because :</b> AWS Marketplace is a digital catalog with thousands of software listings from independent software         vendors that makes it easy to find, test, buy, and deploy software that runs on AWS."
       }
     },
     {
@@ -96,12 +96,12 @@
         },
         {
           "id": 16,
-          "content": "Amazon Virtual Private Cloud (Amazon VPC)"
+          "content": "[x] Amazon Virtual Private Cloud (Amazon VPC)"
         }
       ],
       "answers": {
         "correct": 16,
-        "comment": "Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define."
+        "comment": "<b>The correct answer is</b>D) Amazon Virtual Private Cloud (Amazon VPC) <br><b>Because :</b>  Amazon VPC lets users provision a logically isolated section of the AWS Cloud where users can launch         AWS resources in a virtual network that they define."
       }
     },
     {
@@ -114,7 +114,7 @@
         },
         {
           "id": 18,
-          "content": "Maintaining physical hardware "
+          "content": "[x] Maintaining physical hardware "
         },
         {
           "id": 19,
@@ -127,7 +127,7 @@
       ],
       "answers": {
         "correct": 18,
-        "comment": "Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
+        "comment": "<b>The correct answer is</b>B) Maintaining physical hardware <br><b>Because :</b> Maintaining physical hardware is an AWS responsibility under the AWS shared responsibility model."
       }
     },
     {
@@ -140,7 +140,7 @@
         },
         {
           "id": 22,
-          "content": "Edge locations"
+          "content": "[x] Edge locations"
         },
         {
           "id": 23,
@@ -153,7 +153,7 @@
       ],
       "answers": {
         "correct": 22,
-        "comment": "To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide. "
+        "comment": "<b>The correct answer is</b>B) Edge locations <br><b>Because :</b> To deliver content to users with lower latency, Amazon CloudFront uses a global network of points of presence (edge locations and regional edge caches) worldwide. "
       }
     },
     {
@@ -170,7 +170,7 @@
         },
         {
           "id": 27,
-          "content": "Enable multi-factor authentication"
+          "content": "[x] Enable multi-factor authentication"
         },
         {
           "id": 28,
@@ -179,7 +179,7 @@
       ],
       "answers": {
         "correct": 27,
-        "comment": "Multi-factor authentication (MFA) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources."
+        "comment": "<b>The correct answer is</b>C) Enable multi-factor authentication <br><b>Because :</b>Multi-factor authentication (MFA) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources."
       }
     },
     {
@@ -192,7 +192,7 @@
         },
         {
           "id": 30,
-          "content": "AWS CloudTrail"
+          "content": "[x] AWS CloudTrail"
         },
         {
           "id": 31,
@@ -205,7 +205,7 @@
       ],
       "answers": {
         "correct": 30,
-        "comment": "AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs."
+        "comment": "<b>The correct answer is</b>B) AWS CloudTrail <br><b>Because :</b>AWS CloudTrail helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs."
       }
     },
     {
@@ -226,12 +226,12 @@
         },
         {
           "id": 34,
-          "content": "Amazon Route 53"
+          "content": "[x] Amazon Route 53"
         }
       ],
       "answers": {
         "correct": 34,
-        "comment": "Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries"
+        "comment": "<b>The correct answer is</b>D) Amazon Route 53 <br><b>Because :</b>Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured CloudWatch for Amazon SNS, they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries"
       }
     },
     {
@@ -252,12 +252,12 @@
         },
         {
           "id": 38,
-          "content": "AWS Acceptable Use Policy"
+          "content": "[x] AWS Acceptable Use Policy"
         }
       ],
       "answers": {
         "correct": 38,
-        "comment": "The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS infrastructure. "
+        "comment": "<b>The correct answer is</b>D) AWS Acceptable Use Policy <br><b>Because :</b>The AWS Acceptable Use Policy provides information regarding prohibited actions on the AWS infrastructure. "
       }
     }
   ]
