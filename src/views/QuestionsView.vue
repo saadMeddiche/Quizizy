@@ -1,4 +1,7 @@
 <template>
+
+  <ProgressBar v-if="Parts.length" :NumberOfQuestions="Parts.length" :PassedQuestions="currentIndex+1"/>
+
   <div class="questions">
     
     <!-- Parts -->
@@ -20,7 +23,16 @@
         </div>
 
       </div>
-
+        <!-- ===============Buttons=============== -->
+        <div class="TestButtons">
+          <!-- Result Button -->
+          <router-link v-if="SeeResults && selectedOption" class="Result_Button" :to="{name : 'ResultsView'}" @click="Correction();passResults()">See Results</router-link> 
+          <!-- Next Button -->
+          <div v-if="!SeeResults && selectedOption" class="Next_Button">
+            <button @click="NextPart">Next</button>
+          </div>
+        </div>
+        <!-- ===============End Buttons=============== -->
     </div>
     <!-- Wait For the Parts To Load -->
     <div v-else class="LoadingParts">
@@ -31,20 +43,16 @@
 
   </div>
 
-  <!-- ===============Buttons=============== -->
-  <div class="TestButtons">
-    <!-- Result Button -->
-    <router-link v-if="SeeResults && selectedOption" class="Result_Button" :to="{name : 'ResultsView'}" @click="Correction();passResults()">See Results</router-link> 
-    <!-- Next Button -->
-    <div v-if="!SeeResults && selectedOption" class="Next_Button">
-      <button @click="NextPart">Next</button>
-    </div>
-  </div>
-  <!-- ===============End Buttons=============== -->
+ 
 </template>
 
 <script>
+import ProgressBar from '@/components/progressBar.vue'
+
 export default {
+  components:{
+    ProgressBar
+  },
   data(){
     return {
       Parts:[],

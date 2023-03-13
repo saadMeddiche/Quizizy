@@ -54,51 +54,5 @@ export default {
 </script>
 
 <style>
-/* .nav {
-  display: flex;
-  justify-content: space-around;
-  background: #ffc400;
-  padding: 10px;
-
-  height: fit-content;
-}
-
-.logo{
-  font-size: 30px;
-  color:#5b1647;
-
-  display: flex;
-  align-items: center;
-}
-
-.logo p{
-  margin: 0;
-  font-weight: bold;
-}
-
-.links{
-  display: flex;
-  align-items: center;
-
-  gap: 40px;
-
-  font-size: 30px;
-  font-weight: bold;
-
-  height: fit-content;
-
   
-}
-
-.nav a{
-text-decoration: none;
-color:#5b1647;
-}
-
-.nav a.active {
-  color: #ffc400;
-  background-color:#5b1647 ;
-  padding: 4px;
-  border-radius:5px ;
-} */
 </style>
